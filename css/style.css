@@ -1,0 +1,98 @@
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+
+:root {
+  /* colors */
+  --clr-white: 0, 0%, 100%, 0.75;
+  --clr-soft-white: 0, 0%, 95%;
+  --clr-orange: 31, 77%, 52%;
+  --clr-drk-cyan: 184, 100%, 22%;
+  --clr-xtr-drk-cyan: 179, 100%, 13%;
+  /* fonts */
+  --ff-body: 'Lexend Deca', sans-serif;
+  --ff-heading: 'Big Shoulders Display', cursive;
+}
+
+
+/* ======================== */
+/* Reset and General Styles */
+/* ======================== */
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 25px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: hsl( var(--clr-white));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+img {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* General Styles */
+.sedan {
+  background: hsl( var(--clr-orange));
+}
+
+.suv {
+  background: hsl( var(--clr-drk-cyan));
+}
+
+.luxury {
+  background: hsl( var(--clr-xtr-drk-cyan));
+}
+
+h2 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  color: hsl( var(--clr-soft-white));
+}
+
+/* Frontend Mentor-specific styles */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
