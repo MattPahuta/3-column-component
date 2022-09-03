@@ -4,7 +4,7 @@
 
 :root {
   /* colors */
-  --clr-white: 0, 0%, 100%, 0.75;
+  --clr-white: 0, 0%, 100%;
   --clr-soft-white: 0, 0%, 95%;
   --clr-orange: 31, 77%, 52%;
   --clr-drk-cyan: 184, 100%, 22%;
@@ -12,6 +12,9 @@
   /* fonts */
   --ff-body: 'Lexend Deca', sans-serif;
   --ff-heading: 'Big Shoulders Display', cursive;
+  /* typography */
+  --fs-body: 0.938rem;
+  --fs-heading: 2.5rem;
 }
 
 
@@ -22,6 +25,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  color: hsl(0, 0%, 100%);
 }
 
 *,
@@ -34,15 +38,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--ff-body);
-  font-size: 15px;
-  line-height: 25px;
+  font-size: var(--fs-body);
   text-align: left;
   font-weight: 400;
   line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: hsl( var(--clr-white));
+  /* min-height: 100vh; */
+  
 }
 
 h1,
@@ -74,10 +75,28 @@ select {
   font: inherit;
 }
 
+
+
+
+/* Utility classes */
+
+.flex {
+  display: flex;
+}
+
+.container {
+  padding: 5rem 1.5rem;
+  flex-direction: column;
+
+}
+
 /* General Styles */
+
 .sedan {
   background: hsl( var(--clr-orange));
+  border-radius: 0.5rem 0.5rem 0 0;
 }
+
 
 .suv {
   background: hsl( var(--clr-drk-cyan));
@@ -85,14 +104,99 @@ select {
 
 .luxury {
   background: hsl( var(--clr-xtr-drk-cyan));
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
-h2 {
+.card {
+  padding: 3rem 3rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+.card-content h2,
+.card-content p {
+    color: hsl( var(--clr-white));
+}
+
+.card-content h2 {
   font-family: var(--ff-heading);
+  font-size: var(--fs-heading);
   font-weight: 700;
+  text-transform: uppercase;
   color: hsl( var(--clr-soft-white));
 }
 
-/* Frontend Mentor-specific styles */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.card-content p {
+  max-width: 45ch;
+}
+
+
+
+@media (min-width: 50em) {
+  .container {
+    flex-direction: row;
+  }
+  .card {
+    flex: 1;
+  }
+}
+
+
+/* .button {
+  display: inline-block;
+
+  outline: none;
+  border: 0;
+
+  padding: 0.625em 1.875em;
+  background: var(--clr-soft-white);
+} */
+
+.button {
+  cursor: pointer;
+  background: #f2f2f2;
+  /* placeholder color */
+  color: purple;
+  padding: 12px 31.5px;
+  text-decoration: none;
+  border-radius: 100vmax;
+  vertical-align: middle;
+  font-size: var(--fs-body);
+  font-weight: 400;
+}
+
+.sedan .button {
+  color: hsl( var(--clr-orange));
+}
+
+.suv .button {
+  color: hsl( var(--clr-drk-cyan));
+}
+
+.luxury .button {
+  color: hsl( var(--clr-xtr-drk-cyan));
+}
+
+.button:hover,
+.button:focus-visible {
+  outline: 2px solid hsl( var(--clr-white));
+  color: #fff;
+}
+
+.sedan .button:hover {
+  background: hsl( var(--clr-orange));
+}
+
+.suv .button:hover {
+  background: hsl( var(--clr-drk-cyan));
+}
+
+.luxury .button:hover {
+  background: hsl( var(--clr-xtr-drk-cyan));
+}
