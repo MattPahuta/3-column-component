@@ -33,8 +33,8 @@ Your users should be able to:
 
 ### Links
 
-- [solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-and-css-grid-sdErLR-L6)
-- [live site URL](https://mattpahuta.github.io/meet-landing-page/)
+- [solution URL](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-/hub/responsive-3column-card-component-using-flexbox-Bh2SVpVVW0)
+- [live site URL](https://mattpahuta.github.io/3-column-component/)
 
 ## My process
 
